@@ -399,17 +399,21 @@ class _InputWidgetView
             Column(
               mainAxisSize: MainAxisSize.min,
               children: <Widget>[
-                SelectorButton(
-                  country: state.country,
-                  countries: state.countries,
-                  onCountryChanged: state.onCountryChanged,
-                  selectorConfig: widget.selectorConfig,
-                  selectorTextStyle: widget.selectorTextStyle,
-                  searchBoxDecoration: widget.searchBoxDecoration,
-                  locale: state.locale,
-                  isEnabled: widget.isEnabled,
-                  autoFocusSearchField: widget.autoFocusSearch,
-                  isScrollControlled: widget.countrySelectorScrollControlled,
+                Container(
+                  decoration: BoxDecoration(
+                      border: Border.all(color: Colors.grey.withOpacity(0.5))),
+                  child: SelectorButton(
+                    country: state.country,
+                    countries: state.countries,
+                    onCountryChanged: state.onCountryChanged,
+                    selectorConfig: widget.selectorConfig,
+                    selectorTextStyle: widget.selectorTextStyle,
+                    searchBoxDecoration: widget.searchBoxDecoration,
+                    locale: state.locale,
+                    isEnabled: widget.isEnabled,
+                    autoFocusSearchField: widget.autoFocusSearch,
+                    isScrollControlled: widget.countrySelectorScrollControlled,
+                  ),
                 ),
                 SizedBox(
                   height: state.selectorButtonBottomPadding,
